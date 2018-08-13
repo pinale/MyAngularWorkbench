@@ -1,0 +1,34 @@
+payloadcounter.component.html
+1) come usare <ng-content> senza *ngIf solo per assegnare un alias ad una variabile complessa?
+
+2) come inizializzare array di oggetti che non hanno un costruttore   (OK)
+users: User[] = [
+                    { id : 1 ,name:'alessio',email:'alessio@gmail.com',phone:'1-770-736-8031 x56442'},
+                    { id : 2 ,name:'samuel',email:'alessio@gmail.com',phone:'1-770-736-8031 x56442'},
+                    { id : 3 ,name:'emily',email:'alessio@gmail.com',phone:'1-770-736-8031 x56442'},
+                    { id : 4 ,name:'ida',email:'alessio@gmail.com',phone:'1-770-736-8031 x56442'}
+  ];  
+ cosi funziona purche dichiaro nullable tutte le proprieta non inizializzate 
+
+
+
+3) il debugger non si ferma al breakpoint
+
+
+
+
+
+SEMANTIC UI 
+https://www.udemy.com/semantic-ui-for-beginners/learn/v4/t/lecture/5974242?start=0
+
+
+
+FAKE API 
+https://jsonplaceholder.typicode.com/
+
+
+take ,skip  sugli observable non funzionanto
+
+
+grid component,ts come resettare un abservable?
+

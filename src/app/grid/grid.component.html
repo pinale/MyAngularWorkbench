@@ -1,0 +1,27 @@
+<!--<div class="ui right floated buttons ">-->
+<div class="ui buttons">
+  <div class="ui primary button" (click)="loadData();">Load data</div>
+  <span class="ui red button" (click)="resetData();">Reset</span>
+</div>
+
+<table class="ui celled table definition"> <!-- .definition enfatizza la colonna di sinistra-->
+    <thead>
+      <tr>
+          <th></th>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone</th>
+    </tr>
+  </thead>
+    <tbody>
+        <tr *ngFor="let d of data$ | async; index as i">
+          <td>{{i}}</td>
+          <td>{{d.id}}</td>
+          <td>{{d.name}}</td>
+          <td>{{d.email}}</td>
+          <td>{{d.phone}}</td>
+      </tr>
+    </tbody>
+  </table>
+

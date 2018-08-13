@@ -1,4 +1,4 @@
-##My Angular Workbench" 
+##My Angular Workbench## 
 
 Applicazione di esempio con componenti che comunicano con @input @output
 

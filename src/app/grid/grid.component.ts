@@ -1,6 +1,6 @@
 import { DataService } from './../Services/data.service';
 import { User, IPayload } from './../shared/viewmodels';
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { Observable, EMPTY } from 'rxjs';
 
 @Component({
@@ -10,10 +10,9 @@ import { Observable, EMPTY } from 'rxjs';
 })
 export class GridComponent implements OnInit {
 
-  data$ : Observable<User[]>;
-
-  //@Output() change: EventEmitter<number> = new EventEmitter<number>();
-  @Output() change: EventEmitter<IPayload> = new EventEmitter<IPayload>();
+  @Input() data$ : Observable<User[]>;
+  @Output() loadDataSignal: EventEmitter<void> = new EventEmitter<void>();
+  @Output() resetDataSignal: EventEmitter<void> = new EventEmitter<void>();
 
   localpayload: IPayload =  { rows : 0 , kb : 0, time: 0};
   
@@ -21,26 +20,22 @@ export class GridComponent implements OnInit {
   }
 
   ngOnInit() {
-    //this.data$ = this._ds.getData();
   }
-
-
+  
   loadData()
   {
-    this.data$ = this._ds.getData();
-    
-    this.localpayload = { rows : 10 , kb : 300, time: 120};
-    
-    //this.change.emit(99);
-    this.change.emit(this.localpayload);
+    //this.data$ = this._ds.getData();
+    //this.localpayload = { rows : 10 , kb : 300, time: 120};
+    //this.change.emit(this.localpayload);
+    this.loadDataSignal.emit();
   }
 
   resetData()
   {
-
-    this.data$ = EMPTY;  //emette un observable vuoto, da solo il segnale di complete, no il next  // this._ds.getData();
+    //this.data$ = EMPTY;  //emette un observable vuoto, da solo il segnale di complete, no il next  // this._ds.getData();
     
-    //this.change.emit(0);
-    this.change.emit(this.localpayload);
+    this.resetDataSignal.emit();
+    //this.change.emit(this.localpayload);
   }
+  
 }

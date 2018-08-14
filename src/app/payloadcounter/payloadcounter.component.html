@@ -1,8 +1,4 @@
-<p>
-  payloadcounter works!
-</p>
-
-<ng-container *ngIf="localPayload; let p;">
+<ng-container *ngIf="totalPayload; let p;">
 <p><i class="icon calculator"></i> row:{{p.rows}}</p>
 <p><i class="icon cloud download"></i>kb:{{p.kb}}</p>
 <p><i class="icon clock outline"></i>total time:{{p.time}}</p>

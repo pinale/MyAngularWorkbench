@@ -1,4 +1,6 @@
+import { Observable } from 'rxjs';
 import { Component, OnInit, Input } from '@angular/core';
+import { User } from '../shared/viewmodels';
 
 @Component({
   selector: 'app-rowcounter',
@@ -7,11 +9,10 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class RowcounterComponent implements OnInit {
 
-  @Input() rows : number = 0;
+  //@Input() rows : number = 0;
+  @Input() data$ : Observable<User[]>
 
   constructor() { }
-
-  //rows: number = 0;
 
   ngOnInit() {
   }

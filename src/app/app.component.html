@@ -19,8 +19,10 @@
       </h4>
         
     <div class="ui grid">
-      <div class="eight wide column"><div class="ui segment"><app-request-counter></app-request-counter></div></div>
-      <div class="eight wide column"><div class="ui segment"><app-payloadcounter [localPayload]="localPayload"></app-payloadcounter></div></div>
+      <div class="stretched row">
+        <div class="eight wide column"><div class="ui segment"><app-request-counter></app-request-counter></div></div>
+        <div class="eight wide column"><div class="ui large segment"><app-payloadcounter [currentPayload]="data$"></app-payloadcounter></div></div>
+      </div>
     </div>
   </div>
   
@@ -30,14 +32,14 @@
           <i class="database icon"></i>
           Data
       </h4>  
-    <app-grid (change)="BroadcastToComponent($event)"></app-grid>
+    <app-grid [data$]="data$" (loadDataSignal)="loadData($event)" (resetDataSignal)="resetData($event)"></app-grid>
   </div>
   
   <!-- footer segment -->
   <div class="ui segment">
       <div class="ui grid">
           <div class="twelve wide column"><div class="ui segment"><app-pagination></app-pagination></div></div>
-          <div class="four wide column"><div class="ui segment"> <app-rowcounter [rows]="localrows"></app-rowcounter></div></div>
+          <div class="four wide column"><div class="ui segment"> <app-rowcounter [data$]="data$"></app-rowcounter></div></div>
         </div>
   </div>
 

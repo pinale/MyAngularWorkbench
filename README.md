@@ -6,3 +6,4 @@ L'applicazione verrà trasformata (in un branch differente) con la gestione cent
 
 
 in questo branch è stato fatto un tentativo di internalizazione con **i18n**
+https://medium.com/frontend-fun/angular-introduction-to-internationalization-i18n-28226a85e04e

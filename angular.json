@@ -44,7 +44,23 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true
+            },
+            
+            "it" : {
+              "aot": true,
+              "outputPath": "dist/myworkbanch-it/",
+              "i18nFile": "src/locale/messages.it.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "it"
+            },
+            "es" : {
+              "aot": true,
+              "outputPath": "dist/myworkbanch-es/",
+              "i18nFile": "src/locale/messages.es.xlf",
+              "i18nFormat": "xlf",
+              "i18nLocale": "es"
             }
+
           }
         },
         "serve": {
@@ -55,6 +71,12 @@
           "configurations": {
             "production": {
               "browserTarget": "myworkbanch:build:production"
+            },
+            "it": {
+              "browserTarget": "myworkbanch:build:it"
+            },
+            "es": {
+              "browserTarget": "myworkbanch:build:es"
             }
           }
         },

@@ -9,6 +9,7 @@ import { GridComponent } from './grid/grid.component';
 import { PaginationComponent } from './pagination/pagination.component';
 import { RowcounterComponent } from './rowcounter/rowcounter.component';
 import { PayloadcounterComponent } from './payloadcounter/payloadcounter.component';
+import { ClockComponent } from './clock/clock.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PayloadcounterComponent } from './payloadcounter/payloadcounter.compone
     GridComponent,
     PaginationComponent,
     RowcounterComponent,
-    PayloadcounterComponent
+    PayloadcounterComponent,
+    ClockComponent
   ],
   imports: [
     BrowserModule,
